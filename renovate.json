@@ -1,7 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "packageRules": [
+    {
+      "matchManagers": ["mix"],
+      "enabled": true
+    },
+    {
+      "matchManagers": ["mix"],
+      "matchDepTypes": ["prod"],
+      "semanticCommitType": "build",
+      "semanticCommitScope": "deps",
+      "schedule": "at any time"
+    },
+    {
+      "matchManagers": ["mix"],
+      "matchDepTypes": ["dev"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest"],
+      "automerge": true,
+      "automergeType": "branch"
+    }
   ]
 }
-
