@@ -1,0 +1,18 @@
+name: Sobelow
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+
+jobs:
+  sobelow_job:
+    runs-on: ubuntu-latest
+    name: Sobelow Job
+    steps:
+      - uses: actions/checkout@v4
+      - id: run-action
+        uses: sobelow/action@a9bf221c4eef7e7a4486fa1f06257511c9780b46
+      - uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+
