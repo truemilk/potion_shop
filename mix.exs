@@ -51,7 +51,7 @@ defmodule Carafe.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:tailwind, "~> 0.1.8", runtime: Mix.env() == :dev},
-      {:paginator, "~> 0.6.0"},
+      {:paginator, "~> 1.2.0"},
       {:sobelow, "~> 0.13", runtime: false},
       {:mix_audit, "~> 2.1"},
       {:paraxial, "~> 2.8.2"}
