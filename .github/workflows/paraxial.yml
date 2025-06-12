@@ -50,7 +50,7 @@ jobs:
       if: "${{ github.event.number != '' }}"
       run: |
         mix paraxial.scan --github_app \
-          --install_id REPLACE_THIS_VALUE \
+          --install_id 70965908 \
           --repo_owner ${{ github.repository_owner }} \
           --repo_name ${{ env.REPO_NAME }} \
           --pr_number ${{ github.event.number }} \
