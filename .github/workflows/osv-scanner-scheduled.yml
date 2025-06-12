@@ -2,7 +2,7 @@ name: OSV-Scanner Scheduled Scan
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
   # Change "main" to your default branch if you use a different name, i.e. "master"
   #push:
   #  branches: [master]
